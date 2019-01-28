@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React - Template</title>
+    <script src="../../js/react.min.js"></script>
+    <script src="../../js/react-dom.min.js"></script>
+    <script src="../../js/browser.min.js"></script>
+</head>
+<body>
+
+<div id="container"></div>
+
+<script type="text/babel">
+    //variable name works with capital letters.
+
+   var Comment = React.createClass({
+       edit: function(){
+           console.log("Logging comment")
+       },
+
+       delete:function(){
+           console.log("Removig comment")
+       },
+       render: function () {
+           return (
+               <div>
+                   <div>{this.props.children}</div>
+                   <button onClick="this.edit">Edit</button>
+                   <button onClick="this.delete">Delete</button>
+               </div>);
+       }
+   });
+
+    ReactDOM.render(
+        <div>
+            <Comment>What you want?</Comment>
+            <Comment>Why?</Comment>
+        </div>
+        , document.getElementById('container'));
+</script>
+
+</body>
+</html>
