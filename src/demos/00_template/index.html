@@ -13,17 +13,24 @@
     <div id="container"></div>
 
     <script type="text/babel">
-
-        var country = React.createClass({
+        //variable name works with capital letters.
+        var CountryName = React.createClass({
             render: function () {
-                return (<h2>India</h2>);
+                return (
+                    <div>
+                        <h2>India</h2>
+                        <p>It is my home country.</p>
+                    </div>
+                );
             }
         });
 
         ReactDOM.render(
-            <ceal />,
-            document.getElementById('container')
-        );
+            <div>
+                <CountryName/>
+                <CountryName/>
+            </div>
+            , document.getElementById('container'));
     </script>
 
 </body>
